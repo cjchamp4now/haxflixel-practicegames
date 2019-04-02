@@ -22,6 +22,15 @@ class Hero extends FlxSprite
 	
 	override public function update(elapsed:Float):Void
 	{
+		var thelocation = new FlxPoint();
+		thelocation = this.getScreenPosition();
+		var mathstuffx = thelocation.x % 256;
+		var mathstuffy = thelocation.y % 256;
+		//replaceColor(FlxColor.RED,  , false);
+		var mathstuffz:Float = 65535 * mathstuffx + 255 * mathstuffy + mathstuffy;
+		var convertedmath:Int = Std.int(mathstuffz);
+		this.color = convertedmath;
+		//replaceColor(FlxColor.RED, convertedmath , false);
 		movement();
 		super.update(elapsed);
 		//this.color = this.getScreenPosition
@@ -30,8 +39,8 @@ class Hero extends FlxSprite
 	
 	public function movement():Void
 	{
-		var rando = FlxG.random.int(0, 360);
-		velocity.set(speed, speed);
+		var rando = FlxG.random.int(0, 359);
+		velocity.set(speed, 0);
 		velocity.rotate(FlxPoint.weak(0, 0), rando);
 		animation.play("move", false, false, 0);
 	}

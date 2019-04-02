@@ -18,6 +18,7 @@ class PlayState extends FlxState
 		var hero2 = new Hero(100, 100);
 		var hero3 = new Hero(0, 0);
 		hero3.screenCenter();
+		hero1.screenCenter();
 		add(hero1);
 		add(hero2);
 		add(hero3);
