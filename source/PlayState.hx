@@ -22,6 +22,8 @@ class PlayState extends FlxState
 		add(hero1);
 		add(hero2);
 		add(hero3);
+		
+		//for (i in 0...16){ var spr = new Hero(200, 200); add(spr);
 	}
 
 	override public function update(elapsed:Float):Void
