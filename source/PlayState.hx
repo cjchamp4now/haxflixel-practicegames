@@ -2,6 +2,8 @@ package;
 
 import flixel.FlxState;
 import flixel.text.FlxText;
+import flixel.util.FlxColor;
+//using flixel.util.FlxSpriteUtil;
 
 
 class PlayState extends FlxState
@@ -12,19 +14,27 @@ class PlayState extends FlxState
 		super.create();
 		var text = new FlxText(0, 0, 0, "hello world", 64);
 		text.screenCenter();	
+		text.setFormat(null , 32, FlxColor.RED, CENTER, SHADOW, FlxColor.PINK);
+		text.bold = true;
+		text.borderSize = 5;
+		text.moves = true;
+		text.velocity.set(50, 25);
+
 		add(text);
+		//FlxSpriteUtil.screenWrap(text, true, true, true, true);
 		
-		var hero1 = new Hero(5, 5);
-		var hero2 = new Hero(100, 100);
-		var hero3 = new Hero(0, 0);
-		hero3.screenCenter();
-		add(hero1);
-		add(hero2);
-		add(hero3);
+		for (i in 0...16)
+		{
+			var spr = new Hero(0, 0);
+			spr.screenCenter();
+			//FlxSpriteUtil.screenWrap(spr);
+			add(spr);
+		}
 	}
 
 	override public function update(elapsed:Float):Void
 	{
+		//FlxSpriteUtil.screenWrap(text);
 		super.update(elapsed);
 	}
 }
