@@ -14,16 +14,21 @@ class PlayState extends FlxState
 		text.screenCenter();	
 		add(text);
 		
-		var hero1 = new Hero(5, 5);
-		var hero2 = new Hero(100, 100);
-		var hero3 = new Hero(0, 0);
-		hero3.screenCenter();
-		hero1.screenCenter();
-		add(hero1);
-		add(hero2);
-		add(hero3);
+		//var hero1 = new Hero(5, 5);
+		//var hero2 = new Hero(100, 100);
+		//var hero3 = new Hero(0, 0);
+		//hero3.screenCenter();
+		//hero1.screenCenter();
+		//add(hero1);
+		//add(hero2);
+		//add(hero3);
 		
-		//for (i in 0...16){ var spr = new Hero(200, 200); add(spr);
+		for (i in 0...16)
+		{
+			var spr = new Hero(0, 0);
+			spr.screenCenter();
+			add(spr);
+		}
 	}
 
 	override public function update(elapsed:Float):Void
