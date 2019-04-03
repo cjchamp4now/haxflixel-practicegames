@@ -22,7 +22,6 @@ class Hero extends FlxSprite
 	
 	override public function update(elapsed:Float):Void
 	{
-		
 		var thelocation = new FlxPoint();
 		thelocation = this.getScreenPosition();
 		var px = thelocation.x;
@@ -32,11 +31,6 @@ class Hero extends FlxSprite
 		var fz = ((Std.int(px) + Std.int(py)) % 255);
 		
 		this.color = 0xffffff & ((fx << 16) + (fy << 8) + (fz));
-		//replaceColor(FlxColor.RED,  , false);
-		//var mathstuffz:Float = 65535 * mathstuffx + 255 * mathstuffy + mathstuffy;
-		//var convertedmath:Int = Std.int(mathstuffz);
-		//this.color = 0xffffff & (((Std.int(y) % 255) << 16) + ((Std.int(x) % 255) << 8) + ((Std.int(x) + Std.int(y))));
-		//this.color = convertedmath;
 		movement();
 		super.update(elapsed);
 	}
