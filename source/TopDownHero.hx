@@ -73,20 +73,10 @@ class TopDownHero extends FlxSprite
 	
 	public function movement():Void
 	{
-		
-		
-		
-		
-		
-		
-		
 		//var rando = FlxG.random.int(0, 359);
 		//velocity.set(speed, 0);
 		//velocity.rotate(FlxPoint.weak(0, 0), rando);
-		//animation.play("move", false, false, 0);
-		
-		
-		
+		//animation.play("move", false, false, 0);	
 		thescreenwrap(this);
 	}
 	
